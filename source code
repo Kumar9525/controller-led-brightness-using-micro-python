@@ -1,0 +1,14 @@
+import RPi.GPIO as gpio
+import time
+gpio.setwarnings(False)
+gpio.setmode(gpio.BCM)
+gpio.setup(17,gpio.OUT)
+value=gpio.PWM(17,100)
+value.start(0)
+while True:
+	for i in range(100):
+		value.ChangeDutyCycle(i)
+		time.sleep(0.2)
+	for i in range(100)
+		value.ChangeDutyCycle(100-i)
+		time.sleep(0.2)
